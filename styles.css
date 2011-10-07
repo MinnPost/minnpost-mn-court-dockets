@@ -1,0 +1,13 @@
+
+li.cd_docket {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #CCC;
+}
+.cd_start {
+    float:left;
+    margin-right: 10px;
+}
+
+ul.cd_dockets-list {
+    list-style: none;
+}
