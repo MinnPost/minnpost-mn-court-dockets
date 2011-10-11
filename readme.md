@@ -7,12 +7,10 @@ WikiScraper is here: https://scraperwiki.com/scrapers/minnesota_us_district_cour
 # Notes:
 wikiscraper.py is just a local copy of the code on WikiScraper so we don't lose it. This means it may not always be completely up to date in our repository, but I'll try to remember to keep them the same.
 
-# Necessary to do:
-- Fix date formatting
-- Make it prettier
+# Still need to do:
+- Figure out a way to get context for these cases (hopefully..)
 
 # Pie in the sky:
-- Figure out a way to get context for these cases (hopefully..)
-- Control of SQL statements (search for a particular term, court, date, etc.)
+- Control of SQL statements (, court, date, etc.)
 - Twitter/email when updates are found
 - Run the scraper more than once a day (not possible with WikiScraper, run our own?)
