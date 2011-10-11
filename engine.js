@@ -1,5 +1,7 @@
 var url='https://api.scraperwiki.com/api/1.0/datastore/sqlite?format=jsondict&name=minnesota_us_district_courts&query=SELECT%20*%0AFROM%20swdata%0AORDER%20BY%20Start%20DESC%0ALIMIT%2010';
 
+var myd;
+
 function formatDate(date) {
     var ampm = 'a.m.';
     var month = date.getMonth() + 1;
@@ -22,6 +24,7 @@ function getData(limit, searchTerm) {
     url = formatURL(limit, searchTerm);
     $.getJSON(url + '&callback=?', function(data) {
         myd = data;
+        if (myd.length > 0) {
         var h = '<ul class="cd_dockets-list">';
     	for (i in data) {
     	    // JavaScript needs time in milliseconds
@@ -35,6 +38,9 @@ function getData(limit, searchTerm) {
     	}
     	h += '</ul>';
     	$('#cd_dockets-div').html(h);
+    	} else {
+    	    $('#cd_dockets-div').html('Error - no data receieved. Your search term may be invalid, or has returned nothing.');
+    	}
     });
 }
 
@@ -44,7 +50,6 @@ function formatURL(limit, searchTerm) {
     url += ' WHERE Description LIKE \'%' + searchTerm + '%\'';
     url += ' ORDER BY Start DESC';
     url += ' LIMIT ' + limit;
-    console.log(url);
     return baseUrl + encodeURIComponent(url);
 }
 

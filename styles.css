@@ -23,6 +23,10 @@ li.cd_docket {
 ul.cd_dockets-list {
     list-style: none;
 }
+#help {
+    float:right;
+    width:320px;
+}
 #controls {
     float:right;
     width:320px;

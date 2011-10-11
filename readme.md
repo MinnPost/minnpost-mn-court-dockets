@@ -11,6 +11,6 @@ wikiscraper.py is just a local copy of the code on WikiScraper so we don't lose 
 - Figure out a way to get context for these cases (hopefully..)
 
 # Pie in the sky:
-- Control of SQL statements (, court, date, etc.)
+- Control of SQL statements (court, date, etc.)
 - Twitter/email when updates are found
 - Run the scraper more than once a day (not possible with WikiScraper, run our own?)
