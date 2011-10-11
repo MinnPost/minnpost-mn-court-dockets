@@ -1,13 +1,32 @@
-
+#cd_dockets-div {
+    float: left;
+    width: 640px;
+}
 li.cd_docket {
     margin-bottom: 10px;
     border-bottom: 1px solid #CCC;
 }
-.cd_start {
-    float:left;
-    margin-right: 10px;
+.cd_item {
+    margin-bottom: 5px;
 }
-
+.cd_time {
+    font-weight: bold;
+}
+.cd_court {
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #999;
+}
+.cd_description {
+    font-size: 18px;
+}
 ul.cd_dockets-list {
     list-style: none;
+}
+#controls {
+    float:right;
+    width:320px;
+}
+.clear {
+    clear: both;
 }
