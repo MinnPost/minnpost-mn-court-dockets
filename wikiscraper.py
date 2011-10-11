@@ -25,7 +25,7 @@ for court, url in courts.iteritems():
         convertedEnd = convertTime(end)
         
         # We need a unique id so that the same case doesn't overwrite itself when later brought up
-        uniqueId = str(now) + ' -- ' + description
+        uniqueId = str(time.time()) + ' -- ' + description
         data = {'Start': convertedStart, 'End': convertedEnd, 'Description': description, 'Court': court, 'UniqueId': uniqueId}
         scraperwiki.sqlite.save(unique_keys=['UniqueId'], data=data)
 
